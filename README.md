@@ -82,6 +82,9 @@ node controller.js
 
 #### What is one thing that I learned from doing this project? :books:
 
+- [ ] Make sure that the pages and the routes correspond (e.g., that the submit form in the login page go to home, which redirects to profile)
+- [ ] Plan for routes first
+
 #### Credits :recycle:
 
 [Jest](https://jestjs.io/)
