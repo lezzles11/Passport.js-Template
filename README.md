@@ -12,6 +12,22 @@ The purpose of this repository is to have a series of passport.js examples to re
    3a. If already logged in, then allow them in
    3b. Otherwise, redirect to login/signup page
 
+####
+
+- [ ] To authenticate
+- [ ] To redirect
+- [ ] To give messages
+
+## Important Vocabulary
+
+| Word            |                                             Where it occurs                                              |                                  How it works                                  |
+| --------------- | :------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| Strategies      |                                          initial configuration                                           |                Authenticates by verifying username and password                |
+| Verify Callback | after credentials, will invoke the verify callback with the username & pass. returns done if successful. |                 Finds user that has that username and password                 |
+| initialize      |                                            Need to initialize                                            |                                                                                |
+| sessions        |                                     after successful authentication                                      | passport will serialize and deserialize user instances to and from the session |
+|                 |                                                                                                          |                                                                                |
+
 ### Where it fits :paperclip:
 
 - [ ] Fits into node.js applications that require user authentication
@@ -22,17 +38,17 @@ The purpose of this repository is to have a series of passport.js examples to re
 
 ## Sprint :athletic_shoe:
 
-| Done? | Component      | Priority | Estimated Time | Actual Time |
-| ----- | -------------- | :------: | :------------: | :---------: |
-|       | This checklist |    H     |    30 mins     |   30mins    |
-|       |                |    M     |    30 mins     |   10mins    |
-|       |                |    M     |    30 mins     |   15 mins   |
-|       |                |    M     |                |             |
-|       |                |    M     |                |             |
-|       |                |    M     |                |             |
-|       |                |    M     |                |             |
-|       |                |    M     |                |             |
-|       |                |    M     |                |             |
+| Done? | Component                                | Priority | Estimated Time | Actual Time |
+| ----- | ---------------------------------------- | :------: | :------------: | :---------: |
+|       | This checklist                           |    H     |    30 mins     |   30mins    |
+|       | Complete diagram as to how passport fits |    M     |    30 mins     |   10mins    |
+|       | Able to configure database               |    M     |    30 mins     |   15 mins   |
+|       | Find user based on username and password |    M     |                |             |
+|       | create strategy for passport             |    M     |                |             |
+|       | Model example                            |    M     |                |             |
+|       |                                          |    M     |                |             |
+|       |                                          |    M     |                |             |
+|       |                                          |    M     |                |             |
 
 ## Issues and Resolutions :flashlight:
 
@@ -49,6 +65,14 @@ The purpose of this repository is to have a series of passport.js examples to re
 
 [Jest](https://jestjs.io/)
 [Passport.js](http://www.passportjs.org/)
+[passport-local](https://github.com/jaredhanson/passport-local)
+[express]()
+[bodyParser]()
+[session]()
+[cors]()
+[nodemon]()
+[bcryptjs](https://www.npmjs.com/package/bcryptjs)
+[example](https://github.com/passport/express-4.x-local-example/blob/master/db/users.js)
 
 #### Contributing :round_pushpin:
 
