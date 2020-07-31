@@ -16,7 +16,7 @@ node controller.js
 
 ### How it works :open_book:
 
-      ![Passport.js](https://www.dropbox.com/s/4jew8ek5yfotopf/Passport.js.png?raw=1)
+![Passport.js](https://www.dropbox.com/s/4jew8ek5yfotopf/Passport.js.png?raw=1)
 
 1. See if username matches username in db
 2. Check if password matches password
