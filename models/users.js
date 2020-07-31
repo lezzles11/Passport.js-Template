@@ -14,11 +14,14 @@ let users = [
 
 // Find the user by id
 exports.findById = function (id, callback) {
+  // process next tick docs: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+  // begins processing event loop
   process.nextTick(function () {
     let index = id - 1;
     // if the user id exists
     if (users[index]) {
       // return the user
+      // callback is a function called at the completion of a task, such as looking for user in the array
       callback(null, users[index]);
     } else {
       // otherwise, call error

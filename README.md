@@ -4,6 +4,16 @@
 
 The purpose of this repository is to have a series of passport.js examples to reference to later.
 
+### How to run this package
+
+```
+npm install
+```
+
+```
+node controller.js
+```
+
 ### How it works :open_book:
 
 1. See if username matches username in db
@@ -31,6 +41,7 @@ The purpose of this repository is to have a series of passport.js examples to re
 ### Where it fits :paperclip:
 
 - [ ] Fits into node.js applications that require user authentication
+      ![Passport.js](https://www.dropbox.com/s/4jew8ek5yfotopf/Passport.js.png?raw=1)
 
 ### User Stories :telescope:
 
