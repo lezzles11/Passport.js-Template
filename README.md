@@ -16,6 +16,8 @@ node controller.js
 
 ### How it works :open_book:
 
+      ![Passport.js](https://www.dropbox.com/s/4jew8ek5yfotopf/Passport.js.png?raw=1)
+
 1. See if username matches username in db
 2. Check if password matches password
 3. Check if user has been authenticated already (look at sessions)
@@ -30,18 +32,17 @@ node controller.js
 
 ## Important Vocabulary
 
-| Word            |                                             Where it occurs                                              |                                  How it works                                  |
-| --------------- | :------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
-| Strategies      |                                          initial configuration                                           |                Authenticates by verifying username and password                |
-| Verify Callback | after credentials, will invoke the verify callback with the username & pass. returns done if successful. |                 Finds user that has that username and password                 |
-| initialize      |                                            Need to initialize                                            |                                                                                |
-| sessions        |                                     after successful authentication                                      | passport will serialize and deserialize user instances to and from the session |
-|                 |                                                                                                          |                                                                                |
+| Word            |                                             Where it occurs                                              |                                              How it works                                              |
+| --------------- | :------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
+| Strategies      |                                          initial configuration                                           |                            Authenticates by verifying username and password                            |
+| Verify Callback | after credentials, will invoke the verify callback with the username & pass. returns done if successful. |                             Finds user that has that username and password                             |
+| initialize      |                                            Need to initialize                                            |                                                                                                        |
+| sessions        |                                     after successful authentication                                      | passport will serialize and deserialize user instances (so you don't always have to pass in user/pass) |
+|                 |                                                                                                          |                                                                                                        |
 
 ### Where it fits :paperclip:
 
 - [ ] Fits into node.js applications that require user authentication
-      ![Passport.js](https://www.dropbox.com/s/4jew8ek5yfotopf/Passport.js.png?raw=1)
 
 ### User Stories :telescope:
 
@@ -49,17 +50,26 @@ node controller.js
 
 ## Sprint :athletic_shoe:
 
-| Done? | Component                                | Priority | Estimated Time | Actual Time |
-| ----- | ---------------------------------------- | :------: | :------------: | :---------: |
-|       | This checklist                           |    H     |    30 mins     |   30mins    |
-|       | Complete diagram as to how passport fits |    M     |    30 mins     |   10mins    |
-|       | Able to configure database               |    M     |    30 mins     |   15 mins   |
-|       | Find user based on username and password |    M     |                |             |
-|       | create strategy for passport             |    M     |                |             |
-|       | Model example                            |    M     |                |             |
-|       |                                          |    M     |                |             |
-|       |                                          |    M     |                |             |
-|       |                                          |    M     |                |             |
+| Done? | Component                                                                  | Priority | Estimated Time | Actual Time |
+| ----- | -------------------------------------------------------------------------- | :------: | :------------: | :---------: |
+| x     | This checklist                                                             |    H     |    30 mins     |   30mins    |
+| x     | Complete diagram as to how passport fits                                   |    M     |    30 mins     |   10mins    |
+| x     | Set up example database (look in models)                                   |    M     |    30 mins     |   15 mins   |
+| x     | Find user based on username                                                |    M     |                |             |
+| x     | Find user based on id                                                      |    M     |                |             |
+| x     | Home page (that passes in user)                                            |    M     |                |             |
+| x     | Login page                                                                 |    M     |                |             |
+| x     | Profile page that passes in user                                           |    M     |                |             |
+| x     | Import required packages                                                   |    M     |                |             |
+| x     | Create configuration for passport (can find by username)                   |    M     |                |             |
+| x     | Serialize user function                                                    |    M     |                |             |
+| x     | Deserialize user function                                                  |    M     |                |             |
+| x     | Set up express configuration                                               |    M     |                |             |
+| x     | initialize passport                                                        |    M     |                |             |
+| x     | create passport session - acts as middleware to deserialize/serialize user |    M     |                |             |
+| x     | create express-session                                                     |    M     |                |             |
+| x     | pass in the passport middleware for pages that need authentication         |    M     |                |             |
+| x     | Make sure routes go to the right place                                     |    M     |                |             |
 
 ## Issues and Resolutions :flashlight:
 
@@ -78,10 +88,6 @@ node controller.js
 [Passport.js](http://www.passportjs.org/)
 [passport-local](https://github.com/jaredhanson/passport-local)
 [express]()
-[bodyParser]()
-[session]()
-[cors]()
-[nodemon]()
 [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 [example](https://github.com/passport/express-4.x-local-example/blob/master/db/users.js)
 
